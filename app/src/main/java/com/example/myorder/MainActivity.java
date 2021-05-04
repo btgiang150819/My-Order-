@@ -30,17 +30,15 @@ public class MainActivity extends Activity {
             sum += element.getAmount()*element.getQuantum();
         });
         vat = (float) (Math.round(sum*0.1*10.0)/10.0);
-        sum = (float) (Math.round((vat + sum)*10.0)/10.0);
         mVAT.setText("$" + vat);
-        mSUm.setText("$"+ sum);
+        mSUm.setText("$"+ (Math.round((vat + sum)*10.0)/10.0));
         FoodAdapter foodAdapter = new FoodAdapter(mList_food, new OnMoney() {
             @Override
             public void setMoney(float temp) {
                 sum = sum + temp;
                 vat = (float) (Math.round(sum*0.1*10.0)/10.0);
-                sum = (float) (Math.round((vat + sum)*10.0)/10.0);
                 mVAT.setText("$" + vat);
-                mSUm.setText("$"+ sum);
+                mSUm.setText("$"+ (Math.round((vat + sum)*10.0)/10.0));
             }
 
         });
