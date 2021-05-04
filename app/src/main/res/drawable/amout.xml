@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <stroke
+        android:color="#EEA6A3A3"
+        android:width="1dp"/>              <!-- Màu và độ rộng của viền -->
+
+    <corners android:radius="10dp"/>         <!-- Thiết lập góc cạnh của nút -->
+
+</shape>
